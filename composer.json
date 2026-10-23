@@ -1,5 +1,5 @@
 {
-    "name": "laminas-api-tools/api-tools-content-negotiation",
+    "name": "uniquesca/api-tools-content-negotiation",
     "description": "Laminas Module providing content-negotiation features",
     "license": "BSD-3-Clause",
     "keywords": [
@@ -8,19 +8,19 @@
         "module",
         "content-negotiation"
     ],
-    "homepage": "https://api-tools.getlaminas.org",
+    "homepage": "https://github.com/uniquesca/api-tools-content-negotiation",
     "support": {
         "docs": "https://api-tools.getlaminas.org/documentation",
-        "issues": "https://github.com/laminas-api-tools/api-tools-content-negotiation/issues",
-        "source": "https://github.com/laminas-api-tools/api-tools-content-negotiation",
-        "rss": "https://github.com/laminas-api-tools/api-tools-content-negotiation/releases.atom",
+        "issues": "https://github.com/uniquesca/api-tools-content-negotiation/issues",
+        "source": "https://github.com/uniquesca/api-tools-content-negotiation",
+        "rss": "https://github.com/uniquesca/api-tools-content-negotiation/releases.atom",
         "chat": "https://laminas.dev/chat",
         "forum": "https://discourse.laminas.dev"
     },
     "config": {
         "sort-packages": true,
         "platform": {
-            "php": "8.0.99"
+            "php": "8.2.99"
         },
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true
@@ -32,8 +32,7 @@
         }
     },
     "require": {
-        "php": "~8.0.0 || ~8.1.0 || ~8.2.0",
-        "laminas-api-tools/api-tools-api-problem": "^1.4.0",
+        "php": "~8.2.0 || ~8.3.0",
         "laminas/laminas-eventmanager": "^2.6.3 || ^3.0.1",
         "laminas/laminas-filter": "^2.7.1",
         "laminas/laminas-http": "^2.5.4",
@@ -43,15 +42,16 @@
         "laminas/laminas-stdlib": "^2.7.8 || ^3.2.1",
         "laminas/laminas-validator": "^2.8.1",
         "laminas/laminas-view": "^2.8.1",
-        "laminas/laminas-zendframework-bridge": "^1.0"
+        "laminas/laminas-zendframework-bridge": "^1.0",
+        "uniquesca/api-tools-api-problem": "^2.0.0"
     },
     "require-dev": {
-        "laminas-api-tools/api-tools-hal": "^1.10",
         "laminas/laminas-coding-standard": "~2.3.0",
         "phpspec/prophecy-phpunit": "^2.0",
         "phpunit/phpunit": "^9.5.27",
-        "psalm/plugin-phpunit": "^0.16.1",
-        "vimeo/psalm": "^4.30"
+        "psalm/plugin-phpunit": "^0.19.2",
+        "uniquesca/api-tools-hal": "^2.0.1",
+        "vimeo/psalm": "^6.0"
     },
     "autoload": {
         "psr-4": {
@@ -74,7 +74,18 @@
         "test-coverage": "phpunit --colors=always --coverage-clover clover.xml",
         "static-analysis": "psalm --shepherd --stats"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/uniquesca/api-tools-api-problem"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/uniquesca/api-tools-hal"
+        }
+    ],
     "replace": {
+        "laminas-api-tools/api-tools-content-negotiation": "^1.10",
         "zfcampus/zf-content-negotiation": "^1.4.0"
     }
 }

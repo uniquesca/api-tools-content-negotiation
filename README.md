@@ -1,6 +1,8 @@
 # Laminas Content Negotiation
 
-[![Build Status](https://github.com/laminas-api-tools/api-tools-content-negotiation/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/laminas-api-tools/api-tools-content-negotiation/actions/workflows/continuous-integration.yml)
+> This is the Uniquesca fork of
+> [laminas-api-tools/api-tools-content-negotiation](https://github.com/laminas-api-tools/api-tools-content-negotiation).
+> It replaces the original package, so other `laminas-api-tools/*` packages depending on it keep working.
 
 > ## 🇷🇺 Русским гражданам
 > 
@@ -43,14 +45,14 @@ Please see the [composer.json](composer.json) file.
 Run the following `composer` command:
 
 ```console
-$ composer require laminas-api-tools/api-tools-content-negotiation
+$ composer require uniquesca/api-tools-content-negotiation
 ```
 
 Alternately, manually add the following to your `composer.json`, in the `require` section:
 
 ```javascript
 "require": {
-    "laminas-api-tools/api-tools-content-negotiation": "^1.2"
+    "uniquesca/api-tools-content-negotiation": "^2.0"
 }
 ```
 
